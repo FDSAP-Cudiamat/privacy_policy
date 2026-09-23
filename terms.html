@@ -364,5 +364,17 @@
 
 </div>
 
+<script>
+  const backButton = document.getElementById("backButton");
+
+  if (document.referrer.includes("terms.html")) {
+    backButton.style.display = "inline-flex";
+  }
+
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
 </body>
 </html>
