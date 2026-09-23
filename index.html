@@ -41,9 +41,9 @@
 
 <body>
 
-  <button class="back-button" onclick="goBack()">
-    ← Terms and Conditions
-  </button>
+<button id="backButton" class="back-button" onclick="goBack()" style="display: none;">
+  ← Back
+</button>
 
   <h1>Privacy Policy for CA-GABAY</h1>
 
@@ -131,15 +131,17 @@
     on this page.
   </p>
 
-  <script>
-    function goBack() {
-      if (window.history.length > 1) {
-        window.history.back();
-      } else {
-        window.location.href = "terms.html";
-      }
-    }
-  </script>
+<script>
+  const backButton = document.getElementById("backButton");
+
+  if (document.referrer.includes("terms.html")) {
+    backButton.style.display = "inline-flex";
+  }
+
+  function goBack() {
+    window.history.back();
+  }
+</script>
 
 </body>
 </html>
