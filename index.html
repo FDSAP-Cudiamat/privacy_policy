@@ -26,6 +26,11 @@
       background-color: #ffffff;
     }
 
+    a {
+      color: #1565c0;
+      text-decoration: underline;
+    }
+
     .back-button {
       display: inline-flex;
       align-items: center;
@@ -57,9 +62,9 @@
 
 <div class="container">
 
-  <button id="backButton" class="back-button" onclick="goBack()" style="display: none;">
-    ← Back
-  </button>
+  <a href="terms.html">
+    ← Terms and Conditions
+  </a>
 
     <h1>Privacy Policy for CA-GABAY</h1>
 
@@ -147,18 +152,6 @@
       on this page.
     </p>
 </div>
-
-<script>
-  const backButton = document.getElementById("backButton");
-
-  if (document.referrer.includes("terms.html")) {
-    backButton.style.display = "inline-flex";
-  }
-
-  function goBack() {
-    window.history.back();
-  }
-</script>
 
 </body>
 </html>
